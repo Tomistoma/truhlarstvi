@@ -4,7 +4,7 @@ const path = require('path');
 var cors = require('cors')
 
 
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 const app = express()
 app.use(cors())
@@ -19,6 +19,6 @@ app.get('/', (req, res) => {
 });
 
 // Start the server
-app.listen(port, () => {
-    console.log(`Server running at http://127.0.0.1:${port}/`);
+app.listen(PORT, () => {
+    console.log(`Server running at http://127.0.0.1:${PORT}/`);
 });
